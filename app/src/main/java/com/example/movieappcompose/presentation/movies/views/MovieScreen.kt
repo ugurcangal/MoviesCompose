@@ -52,7 +52,7 @@ fun MovieScreen(
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 items(state.movies) {
                     MovieListRow(it, onItemClick = {
-//                        navController.navigate(Screen.MovieDetailScreen.route+"id")
+                        navController.navigate(Screen.MovieDetailScreen.route+"/${it.imdbID}")
                     })
                 }
             }
